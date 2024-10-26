@@ -14,6 +14,10 @@ public class TicketController {
 
     @PostMapping("/createTicket")
     public ResponseEntity<?> createTicket(@RequestBody TicketRequest ticketRequest, HttpServletRequest request) {
+        if (ticketRequest.getVatin() == null || ticketRequest.getFirstName() == null || ticketRequest.getLastName() == null) {
+            return ResponseEntity.badRequest().body("All fields are required.");
+        }
+
         TicketRepository ticketRepository = new TicketRepository();
         if (ticketRepository.getNumberOfTicketsByVatin(ticketRequest.getVatin()) >= 3) {
             return ResponseEntity.badRequest().body("Only 3 tickets allowed per OIB.");
