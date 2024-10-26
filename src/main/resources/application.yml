@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://web2-lab1-485.eu.auth0.com/
+          audiences: https://web-lab1-486
+      client:
+        registration:
+          auth0:
+            client-id: SZUHF9XlPkY5fzsH1E8E4Q6G6pQDouQ6
+            client-secret: aeYWbrXuoulyG7il6pHE9mK1iwiBqEIxqHwIM7HmKXOggMG_ILfGyk8vhTOvgHU1
+            scope: openid,profile,email
+        provider:
+          auth0:
+            issuer-uri: https://web2-lab1-485.eu.auth0.com/

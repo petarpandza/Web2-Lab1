@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title th:text="${numTickets}">Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1 th:text="'Generated ' + ${numTickets} + ' tickets'">Couldn't load number :(</h1>
+</body>
+</html>
